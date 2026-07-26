@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shop | WithLovee_xo</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+WithLovee<span>_xo</span>
+</div>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="products.html">Shop</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+<li>
+<a href="favourites.html">
+<i class="fa-solid fa-heart"></i>
+<span id="fav-count">0</span>
+</a>
+</li>
+
+<li>
+<a href="cart.html">
+<i class="fa-solid fa-cart-shopping"></i>
+<span id="cart-count">0</span>
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+<section class="shop">
+
+<h1>Our Handmade Collection</h1>
+
+<input
+type="text"
+id="search"
+placeholder="Search products...">
+
+<div class="sort-box">
+
+<label>Sort By:</label>
+
+<select id="sort" onchange="sortProducts()">
+
+<option value="default">Default</option>
+
+<option value="low">Price: Low to High</option>
+
+<option value="high">Price: High to Low</option>
+
+<option value="name">Name (A-Z)</option>
+
+</select>
+
+</div>
+
+<div class="filters">
+
+<button onclick="filterProducts('All')">All</button>
+
+<button onclick="filterProducts('Bouquet')">Bouquets</button>
+
+<button onclick="filterProducts('Flower Pot')">Flower Pots</button>
+
+<button onclick="filterProducts('Keychain')">Keychains</button>
+
+<button onclick="filterProducts('Rakhi')">Rakhis</button>
+
+</div>
+
+<div id="products" class="product-grid"></div>
+
+</section>
+
+<script src="js/products.js"></script>
+
+<footer class="footer">
+
+<h3>WithLovee_xo</h3>
+
+<p>Handmade with ❤️ for every special occasion.</p>
+
+<div class="footer-links">
+
+<a href="index.html">Home</a>
+
+<a href="products.html">Shop</a>
+
+<a href="about.html">About</a>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+<p>© 2026 WithLovee_xo. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>

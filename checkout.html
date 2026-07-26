@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout | WithLovee_xo</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+WithLovee<span>_xo</span>
+</div>
+
+<ul>
+<li><a href="products.html">Shop</a></li>
+<li><a href="cart.html">Cart</a></li>
+</ul>
+
+</nav>
+
+<section class="checkout">
+
+<h1>Checkout</h1>
+
+<div class="checkout-container">
+
+<div class="billing">
+
+<h2>Billing Details</h2>
+
+<input type="text" placeholder="Full Name">
+
+<input type="email" placeholder="Email Address">
+
+<input type="text" placeholder="Phone Number">
+
+<textarea placeholder="Delivery Address"></textarea>
+
+<input type="text" placeholder="City">
+
+<input type="text" placeholder="State">
+
+<input type="text" placeholder="Pincode">
+
+</div>
+
+<div class="order-summary">
+
+<h2>Order Summary</h2>
+
+<div id="summary"></div>
+
+<input
+type="text"
+id="coupon"
+placeholder="Enter Coupon Code">
+
+<button
+class="apply-btn"
+onclick="applyCoupon()">
+
+Apply Coupon
+
+</button>
+
+<h3 id="discount">Discount : ₹0</h3>
+
+<h3 id="grandTotal">Total : ₹0</h3>
+
+<h2>Payment Method</h2>
+
+<label>
+<input type="radio" name="payment" value="cod" checked onclick="changePayment()">
+Cash on Delivery
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="payment" value="upi" onclick="changePayment()">
+UPI Payment
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="payment" value="card" onclick="changePayment()">
+Credit / Debit Card
+</label>
+
+<div id="paymentBox"></div>
+
+<br>
+
+<button class="btn" onclick="placeOrder()">
+Place Order
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<script src="js/cart.js"></script>
+
+<footer class="footer">
+
+<h3>WithLovee_xo</h3>
+
+<p>Handmade with ❤️ for every special occasion.</p>
+
+<div class="footer-links">
+
+<a href="index.html">Home</a>
+
+<a href="products.html">Shop</a>
+
+<a href="about.html">About</a>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+<p>© 2026 WithLovee_xo. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>

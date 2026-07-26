@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Order Successful | WithLovee_xo</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<section class="success-page">
+
+<div class="success-box">
+
+<div class="tick">✔</div>
+
+<h1>Thank You!</h1>
+
+<p>Your order has been placed successfully.</p>
+
+<h3 id="orderId"></h3>
+
+<h4 id="orderDate"></h4>
+
+<a href="products.html" class="btn">
+Continue Shopping
+</a>
+
+</div>
+
+</section>
+
+<script>
+
+let id="WLX"+Math.floor(Math.random()*1000000);
+
+document.getElementById("orderId").innerHTML="Order ID : "+id;
+
+let today=new Date();
+
+document.getElementById("orderDate").innerHTML=
+today.toLocaleString();
+
+</script>
+
+</body>
+
+</html>

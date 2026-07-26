@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Product Details</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+
+WithLovee<span>_xo</span>
+
+</div>
+
+<ul>
+
+<li><a href="products.html">← Back to Shop</a></li>
+
+</ul>
+
+</nav>
+
+<div id="productDetails"></div>
+
+<section class="related-products">
+
+<h2>You May Also Like</h2>
+
+<div id="relatedProducts" class="product-grid"></div>
+
+</section>
+
+<section class="reviews">
+
+<h2>Customer Reviews</h2>
+
+<div class="review-card">
+
+<h4>⭐⭐⭐⭐⭐ Priya</h4>
+
+<p>
+Beautiful bouquet! The quality was amazing and exactly as shown.
+</p>
+
+</div>
+
+<div class="review-card">
+
+<h4>⭐⭐⭐⭐⭐ Sneha</h4>
+
+<p>
+Perfect gift for my friend's birthday. Loved the packaging.
+</p>
+
+</div>
+
+<div class="review-card">
+
+<h4>⭐⭐⭐⭐⭐ Ananya</h4>
+
+<p>
+Very cute handmade product. Will definitely order again!
+</p>
+
+</div>
+
+</section>
+
+<script src="js/products.js"></script>
+
+<script>
+
+const id = Number(localStorage.getItem("selectedProduct"));
+
+const product = products.find(p => p.id === id);
+
+if(product){
+
+document.getElementById("productDetails").innerHTML = `
+
+<div class="detail-container">
+
+<img src="${product.image}" alt="${product.name}">
+
+<div class="detail-info">
+
+<h1>${product.name}</h1>
+
+<div class="rating">
+
+⭐ ${product.rating}
+
+</div>
+
+<p class="price">
+
+₹${product.price}
+
+<span>₹${product.oldPrice}</span>
+
+</p>
+
+<p class="stock">
+
+Only ${product.stock} left
+
+</p>
+
+<p>
+
+${product.description}
+
+</p>
+
+<div class="reviews">
+
+<h2>Customer Reviews</h2>
+
+<div class="review">
+
+★★★★★
+
+<p>
+Beautiful handmade product! The quality is amazing.
+</p>
+
+<span>- Priya</span>
+
+</div>
+
+<div class="review">
+
+★★★★★
+
+<p>
+Exactly as shown in the pictures. Loved it!
+</p>
+
+<span>- Sneha</span>
+
+</div>
+
+<div class="review">
+
+★★★★☆
+
+<p>
+Very cute and perfect for gifting.
+</p>
+
+<span>- Aditi</span>
+
+</div>
+
+</div>
+
+<button class="btn"
+
+onclick="addToCart(${product.id})">
+
+Add To Cart
+
+</button>
+
+</div>
+
+</div>
+
+`;
+
+}
+
+const related = products
+.filter(p => p.category === product.category && p.id !== product.id)
+.slice(0,4);
+
+let relatedHTML = "";
+
+related.forEach(item=>{
+
+relatedHTML += `
+
+<div class="product-card">
+
+<img src="${item.image}" alt="${item.name}">
+
+<h3>${item.name}</h3>
+
+<p class="price">
+
+&#8377;${item.price}
+
+</p>
+
+<button class="btn"
+
+onclick="viewProduct(${item.id})">
+
+View Product
+
+</button>
+
+</div>
+
+`;
+
+});
+
+document.getElementById("relatedProducts").innerHTML = relatedHTML;
+
+</script>
+
+<footer class="footer">
+
+<h3>WithLovee_xo</h3>
+
+<p>Handmade with ❤️ for every special occasion.</p>
+
+<div class="footer-links">
+
+<a href="index.html">Home</a>
+
+<a href="products.html">Shop</a>
+
+<a href="about.html">About</a>
+
+<a href="contact.html">Contact</a>
+
+</div>
+
+<p>© 2026 WithLovee_xo. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+
+</html>
